@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>
+    Report Card
+  </title>
+<style type = "text/css">
+
+
+      @media print {
+         .printdisplay{
+          display: none;
+         }
+      }
+
+</style>
+
+</head>
+<body>
+
+<header style="text-align:center;">
+ <h4>Wisdom Test and Math Challenge</h4> 
+  <div class="logo">
+  <img width="100px" src="static/logo.png">
+  </div>
+  
+  <div class="psp"><!-- class="text-right"-->
+  <img style="position: absolute;top: 5%;right: 20%;" src="static/Pics/{{pics[count]}}">
+  </div>
+  
+</header>
+<section style="display: flex;justify-content: center; padding-top: 10%">
+<table width="985" height="238">
+  <tr>
+    <th width="200" scope="row">Name of Candidate</th>
+    <td width="265">{{can_details[0][0]}}</td>
+    <td width="21">&nbsp;</td>
+    <th width="200" scope="row">Registration No</th>
+    <td width="265">{{can_details[5][0]}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Grade</th>
+    <td>{{can_details[1][0]}}</td>
+    <td>&nbsp;</td>
+    <th scope="row">Gender</th>
+    <td>{{can_details[6][0]}}</td>
+  </tr>
+  <tr>
+    <th scope="row">School Name</th>
+    <td>{{can_details[2][0]}}</td>
+    <td>&nbsp;</td>
+    <th scope="row">Date of Birth</th>
+    <td>{{can_details[7][0]}}</td>
+  </tr>
+  <tr>
+    <th scope="row">City of Residence</th>
+    <td>{{can_details[3][0]}}</td>
+    <td>&nbsp;</td>
+    <th scope="row">Date of Test</th>
+    <td>{{can_details[8][0]}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Country of Residenece</th>
+    <td>{{can_details[4][0]}}</td>
+    <td>&nbsp;</td>
+    <th scope="row">Extra Time assistance</th>
+    <td>{{can_details[9][0]}}</td>
+  </tr>
+</table>
+</section>
+<div style="display: flex;justify-content: center; padding-top: 5%">
+
+  <h4><u>Student Performance</u></h4>
+
+</div>
+  <section style="display: flex;justify-content: center; padding-top: 1%;font-size: 14px;">
+  <table width="985" height="282" border="1" style="text-align: center;">
+  <tr>
+    <th width="85" scope="col">Question No</th>
+    <th width="100" scope="col">Time Spent on question</th>
+    <th width="100" scope="col">Score if correct</th>
+    <th width="100" scope="col">Score if incorrect</th>
+    <th width="100" scope="col">Attempt status</th>
+    <th width="100" scope="col">What you marked</th>
+    <th width="100" scope="col">Correct Answer</th>
+    <th width="200" scope="col">Outcome(Correct/Incorrect/Not Attempted)</th>
+    <th width="100" scope="col">Your Score</th>
+  </tr>
+  <tr>
+    <td>{{questions[0]}}</td>
+    <td>{{recorddetails[0][0]}}</td>
+    <td>{{recorddetails[1][0]}}</td>
+    <td>{{recorddetails[2][0]}}</td>
+    <td>{{recorddetails[3][0]}}</td>
+    <td>{{recorddetails[4][0]}}</td>
+    <td>{{recorddetails[5][0]}}</td>
+    <td>{{recorddetails[6][0]}}</td>
+    <td>{{recorddetails[7][0]}}</td>
+  </tr>
+  <tr>
+    <td>{{questions[1]}}</td>
+    <td>{{recorddetails[0][1]}}</td>
+    <td>{{recorddetails[1][1]}}</td>
+    <td>{{recorddetails[2][1]}}</td>
+    <td>{{recorddetails[3][1]}}</td>
+    <td>{{recorddetails[4][1]}}</td>
+    <td>{{recorddetails[5][1]}}</td>
+    <td>{{recorddetails[6][1]}}</td>
+    <td>{{recorddetails[7][1]}}</td>
+  </tr>
+  <tr>
+    <td>{{questions[2]}}</td>
+    <td>{{recorddetails[0][2]}}</td>
+    <td>{{recorddetails[1][2]}}</td>
+    <td>{{recorddetails[2][2]}}</td>
+    <td>{{recorddetails[3][2]}}</td>
+    <td>{{recorddetails[4][2]}}</td>
+    <td>{{recorddetails[5][2]}}</td>
+    <td>{{recorddetails[6][2]}}</td>
+    <td>{{recorddetails[7][2]}}</td>
+  </tr>
+  <tr>
+    <td>{{questions[3]}}</td>
+    <td>{{recorddetails[0][3]}}</td>
+    <td>{{recorddetails[1][3]}}</td>
+    <td>{{recorddetails[2][3]}}</td>
+    <td>{{recorddetails[3][3]}}</td>
+    <td>{{recorddetails[4][3]}}</td>
+    <td>{{recorddetails[5][3]}}</td>
+    <td>{{recorddetails[6][3]}}</td>
+    <td>{{recorddetails[7][3]}}</td>
+  </tr>
+  <tr>
+    <td>{{questions[4]}}</td>
+    <td>{{recorddetails[0][4]}}</td>
+    <td>{{recorddetails[1][4]}}</td>
+    <td>{{recorddetails[2][4]}}</td>
+    <td>{{recorddetails[3][4]}}</td>
+    <td>{{recorddetails[4][4]}}</td>
+    <td>{{recorddetails[5][4]}}</td>
+    <td>{{recorddetails[6][4]}}</td>
+    <td>{{recorddetails[7][4]}}</td>
+  </tr>
+</table>
+</section>
+<section style="display: flex;justify-content: center; padding-top: 1%;padding-bottom: 1%;font-size: 14px;">
+ <table width="291" border="1">
+  <tr>
+    <th width="177" scope="row">Total Score</th>
+    <td width="98">{{stu_score}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Your overall Percentile</th>
+    <td>{{stu_per}}</td>
+  </tr>
+</table>
+ </section>
+
+<section style="display: flex;justify-content: center; padding-top: 1%;padding-bottom: 1%;font-size: 14px;">
+ <table width="985">
+  <tr>
+    <td width="485"><img src="static/img/performance/{{graphimg}}"></td>
+    <td width="500"><img src="static/img/timespent/{{graphimg}}"></td>
+  </tr>
+  <tr>
+    <td><img src="static/img/time/{{graphimg}}"></td>
+    <td><img src="static/img/attempt/{{graphimg}}"></td>
+  </tr>
+    <tr>
+    <td><img src="static/img/accuracy/{{graphimg}}"></td>
+    
+  </tr>
+</table>
+ </section>
+<section style="display: flex;justify-content: center; padding-top: 1%;padding-bottom: 1%;font-size: 14px;">
+<button class="printdisplay btn btn-secondary" onclick="window.print()">Print Report Card</button>
+&nbsp;&nbsp;&nbsp;
+<form method="post">
+<input type="text" name="count" value="{{count}}" style="display: none;">
+<button id="next" href="" class="printdisplay btn btn-info" type="submit">Next</button>
+</form>
+</section>
+</body>
+</html>
+
